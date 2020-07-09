@@ -17,13 +17,13 @@ func main() {
 		switch ev.Event.(type) {
 		case *eventmessages.FactomEvent_ChainCommit:
 			commit := ev.Event.(*eventmessages.FactomEvent_ChainCommit).ChainCommit
-			log.Printf("Chain Commit: %x", commit.GetChainIDHash())
+			log.Printf("Chain Commit: %x %s", commit.GetChainIDHash(), commit.GetEntityState().String())
 		case *eventmessages.FactomEvent_EntryCommit:
 			commit := ev.Event.(*eventmessages.FactomEvent_EntryCommit).EntryCommit
-			log.Printf("Entry Commit: %x", commit.GetEntryHash())
+			log.Printf("Entry Commit: %x %s", commit.GetEntryHash(), commit.GetEntityState().String())
 		case *eventmessages.FactomEvent_EntryReveal:
 			reveal := ev.Event.(*eventmessages.FactomEvent_EntryReveal).EntryReveal
-			log.Printf("Entry Reveal: %x (chain %x)", reveal.GetEntry().GetHash(), reveal.GetEntry().GetChainID())
+			log.Printf("Entry Reveal: %x (chain %x) %s", reveal.GetEntry().GetHash(), reveal.GetEntry().GetChainID(), reveal.GetEntityState().String())
 		case *eventmessages.FactomEvent_StateChange:
 			// not sure what this is
 			change := ev.Event.(*eventmessages.FactomEvent_StateChange).StateChange
