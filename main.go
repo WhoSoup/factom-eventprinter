@@ -53,33 +53,3 @@ func main() {
 		}
 	}
 }
-
-/*
-
-type FactomEvent_ChainCommit struct {
-	ChainCommit *ChainCommit `protobuf:"bytes,4,opt,name=chainCommit,proto3,oneof" json:"chainCommit,omitempty"`
-}
-type FactomEvent_EntryCommit struct {
-	EntryCommit *EntryCommit `protobuf:"bytes,5,opt,name=entryCommit,proto3,oneof" json:"entryCommit,omitempty"`
-}
-type FactomEvent_EntryReveal struct {
-	EntryReveal *EntryReveal `protobuf:"bytes,6,opt,name=entryReveal,proto3,oneof" json:"entryReveal,omitempty"`
-}
-type FactomEvent_StateChange struct {
-	StateChange *StateChange `protobuf:"bytes,7,opt,name=stateChange,proto3,oneof" json:"stateChange,omitempty"`
-}
-type FactomEvent_DirectoryBlockCommit struct {
-	DirectoryBlockCommit *DirectoryBlockCommit `protobuf:"bytes,8,opt,name=directoryBlockCommit,proto3,oneof" json:"directoryBlockCommit,omitempty"`
-}
-type FactomEvent_ProcessListEvent struct {
-	ProcessListEvent *ProcessListEvent `protobuf:"bytes,9,opt,name=processListEvent,proto3,oneof" json:"processListEvent,omitempty"`
-}
-type FactomEvent_NodeMessage struct {
-	NodeMessage *NodeMessage `protobuf:"bytes,10,opt,name=nodeMessage,proto3,oneof" json:"nodeMessage,omitempty"`
-}
-type FactomEvent_DirectoryBlockAnchor struct {
-	DirectoryBlockAnchor *DirectoryBlockAnchor `protobuf:"bytes,11,opt,name=directoryBlockAnchor,proto3,oneof" json:"directoryBlockAnchor,omitempty"`
-}
-
-
-*/
